@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="../CSS/login.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">Essência d'Alma</div>
+    <nav>
+      <ul>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <form id="formLogin" action="../HTML/blog.html" method="GET" novalidate>
+      <h1><strong>Login</strong></h1>
+
+      <div>
+        <label class="texto_input" for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required />
+        <span class="erro"></span>
+      </div>
+      <br />
+      <div>
+        <label for="senha">Senha:</label><br />
+        <input type="password" id="senha" name="senha" required />
+        <span class="erro"></span>
+      </div>
+      <br />
+      <input id="botao" type="submit" value="Enviar" />
+    </form>
+  </div>
+
+  <script src="../JS/login.js"></script>
+</body>
+</html>

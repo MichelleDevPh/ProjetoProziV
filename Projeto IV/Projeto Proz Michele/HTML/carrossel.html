@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrossel e Texto</title>
+    <link rel="stylesheet" href="../CSS/carrossel.css" />
+  </head>
+  <body>
+    <header>
+      <header>
+        <div class="logo">Essência d'Alma</div>
+        <nav>
+          <ul>
+            <li><a href="../HTML/quem-sou.html">QUEM SOU</a></li>
+            <li><a href="../HTML/blog.html">BLOG</a></li>
+          </ul>
+        </nav>
+      </header>
+    </header>
+    <main>
+      <div class="carrossel-container">
+        <div class="carrossel">
+          <div class="container-imagens">
+            <img src="../assets/carrossel1.jpg" class="slide" alt="Imagem 1" />
+            <img src="../assets/carrossel2.jpg" class="slide" alt="Imagem 2" />
+            <img src="../assets/carrossel3.jpg" class="slide" alt="Imagem 3" />
+            <img src="../assets/carrossel4.jpg" class="slide" alt="Imagem 4" />
+            <img src="../assets/carrossel5.jpg" class="slide" alt="Imagem 5" />
+            <img src="../assets/carrossel6.jpg" class="slide" alt="Imagem 6" />
+          </div>
+          <div class="seta esquerda" onclick="mudarImagem(-1)">&#10094;</div>
+          <div class="seta direita" onclick="mudarImagem(1)">&#10095;</div>
+        </div>
+
+        <div class="card">
+          <h2 id="texto-titulo">Título da Imagem 1</h2>
+          <p id="texto-descricao">Descrição da imagem 1.</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Essência d'Alma &copy; 2025 - Todos os direitos reservados</p>
+      <p>Contato: contato@essenciadalma.com | Telefone: (11) 1234-5678</p>
+      <p>Endereço: Rua da Harmonia, 123 - São Paulo, SP</p>
+    </footer>
+    <script src="../JS/carrossel.js"></script>
+  </body>
+</html>

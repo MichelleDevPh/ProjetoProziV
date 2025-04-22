@@ -1,0 +1,178 @@
+/* Resetando margens e paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-primaria: #123d3d;
+  --cor-secundaria: #000000;
+  --cor-texto: #ffffff;
+  --cor-destaque: rgba(10, 122, 48, 0.678);
+  --cor-post: rgb(70, 92, 61);
+  --fonte-principal: 'Arial', sans-serif;
+  --tamanho-base: clamp(16px, 4vw, 18px);
+  --tamanho-titulo: clamp(20px, 5vw, 24px);
+  --tamanho-subtitulo: clamp(18px, 4.5vw, 22px);
+  --tamanho-pequeno: clamp(14px, 3.5vw, 16px);
+  --espacamento-pequeno: clamp(10px, 2vw, 15px);
+  --espacamento-medio: clamp(15px, 3vw, 20px);
+  --espacamento-grande: clamp(20px, 4vw, 30px);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(https://st3.depositphotos.com/1144687/16436/i/450/depositphotos_164367142-stock-photo-zodial-sign-horoscope-cirlce-on.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; /* Impede a repetição da imagem */
+  background-position: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  filter: blur(3px); /* Blur reduzido */
+  z-index: -1; /* Garante que o efeito fique atrás do conteúdo */
+  background-size: cover; /* Garante que a imagem de fundo não repita */
+}
+
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--espacamento-pequeno) var(--espacamento-medio);
+  background-image: linear-gradient(to right, var(--cor-secundaria), var(--cor-primaria));
+  z-index: 1000;
+  height: 65px;
+}
+
+header .logo {
+  color: #fff;
+  font-size: var(--tamanho-titulo);
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 50%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Evitar que o conteúdo fique escondido pelo header fixo */
+}
+
+.carrossel-container {
+  display: flex;
+  align-items: center;
+  gap: 60px; /* Espaçamento entre o carrossel e o card */
+}
+
+.carrossel {
+  position: relative;
+  width: 320px;
+  height: 570px;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: #ffffff0a;
+  box-shadow: 0 10px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container-imagens {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  width: 320px;
+  height: 570px;
+  object-fit: cover;
+}
+
+.seta {
+  position: absolute;
+  top: 50%;
+  font-size: 24px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  transform: translateY(-50%);
+}
+
+.esquerda {
+  left: 10px;
+}
+
+.direita {
+  right: 10px;
+}
+
+/* Estilo do card */
+.card {
+  background-color: rgba(255, 255, 255, 0.829);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow:  10px 10px 10px rgba(0, 0, 0, 0.479);
+  width: 400px;
+}
+
+.card h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  text-align: justify;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Estilo do footer */
+footer {
+  text-align: center;
+    padding: var(--espacamento-medio);
+    background-image: linear-gradient(to right, var(--cor-primaria), var(--cor-secundaria));
+    color: var(--cor-texto);
+    width: 100%;
+    border-top: 2px solid var(--cor-texto);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    font-size: var(--tamanho-pequeno);
+}
